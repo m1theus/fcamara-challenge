@@ -9,7 +9,7 @@ public class BiggerPurchaseByYear {
     private final Purchase purchase;
 
     public BiggerPurchaseByYear(final String year, final SortedPurchaseByPrice sortedPurchaseByPrice) {
-        final Map<Purchase, List<Products>> purchaseProductMap = new HashMap<>();
+        final Map<Purchase, List<Product>> purchaseProductMap = new HashMap<>();
 
         sortedPurchaseByPrice
                 .getPurchases()

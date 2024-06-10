@@ -9,4 +9,7 @@ public record CustomerResponse(
         @JsonProperty("cpf") String document,
         @JsonProperty("compras") List<PurchasesResponse> purchases
 ) {
+    public int purchaseSize() {
+        return this.purchases.size();
+    }
 }

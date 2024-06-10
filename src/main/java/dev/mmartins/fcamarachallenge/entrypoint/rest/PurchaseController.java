@@ -2,8 +2,8 @@ package dev.mmartins.fcamarachallenge.entrypoint.rest;
 
 import dev.mmartins.fcamarachallenge.application.domain.SortedPurchaseByPrice;
 import dev.mmartins.fcamarachallenge.application.domain.BiggerPurchaseByYear;
-import dev.mmartins.fcamarachallenge.application.domain.usecases.BiggerPurchaseByYearUseCase;
-import dev.mmartins.fcamarachallenge.application.domain.usecases.GetPurchaseUseCase;
+import dev.mmartins.fcamarachallenge.application.domain.usecases.purchase.BiggerPurchaseByYearUseCase;
+import dev.mmartins.fcamarachallenge.application.domain.usecases.purchase.GetPurchaseUseCase;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.PathVariable;
@@ -26,7 +26,7 @@ public class PurchaseController {
         return ResponseEntity.ok(getPurchaseUseCase.execute());
     }
 
-    @GetMapping("/{year}")
+    @GetMapping("/bigger-purchase/{year}")
     public ResponseEntity<BiggerPurchaseByYear> biggerPurchaseByYear(@PathVariable final String year) {
         return ResponseEntity.ok(biggerPurchaseByYearUseCase.execute(year));
     }

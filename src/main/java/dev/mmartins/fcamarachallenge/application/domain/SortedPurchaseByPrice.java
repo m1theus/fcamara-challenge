@@ -29,7 +29,7 @@ public class SortedPurchaseByPrice {
                         if (product == null) {
                             throw new IllegalStateException("Product not found for id: " + purchasesResponse.id());
                         }
-                        return new Products(purchasesResponse.id(), purchasesResponse.count(), product.wineType(), product.price(), product.harvest(), product.purchaseDate());
+                        return new Product(purchasesResponse.id(), purchasesResponse.count(), product.wineType(), product.price(), product.harvest(), product.purchaseDate());
                     })
                     .collect(Collectors.toList());
 

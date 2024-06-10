@@ -2,7 +2,7 @@ package dev.mmartins.fcamarachallenge.application.domain;
 
 import com.fasterxml.jackson.annotation.JsonProperty;
 
-public record Products(
+public record Product(
         @JsonProperty("codigo") Long id,
         @JsonProperty("quantidade") Long count,
         @JsonProperty("tipo_vinho") String wineType,
